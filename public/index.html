@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <title>Rock Paper Scissors</title>
+</head>
+
+<body>
+    <div class="start-screen">
+        <h1>Rock Paper Scissors</h1>
+
+        <div class="create-room-box" id="create-room-box">
+            <div id="createRoomText">Create Room</div>
+            <div id="create-with-id">
+                <input type="text" id="room-id" placeholder="Enter Room Name...">
+                <button id="create-room-btn">Create</button>
+            </div>
+        </div>
+
+        <div class="join-room-box" id="join-room-box">
+            <div id="joinRoomText">Join Room</div>
+            <div class="join-with-id">
+                <input type="text" id="join-room-input" placeholder="Enter Room ID...">
+                <button id="join-room-btn">Join</button>
+            </div>
+
+            <button class="join-random" id="join-random">Join Random</button>
+        </div>
+
+        <div class="error-message" id="error-message"></div>
+    </div>
+
+    <div class="gameplay-screen">
+        <div class="wait-message" id="wait-message">
+            <p>Waiting for another player to join...</p>
+        </div>
+
+        <div class="connected-players">
+            <div class="player">
+                <span class="dot" id="player-1"></span> <span id="player-1-tag"></span>
+                <span class="mscore">You: <span id="my-score" class="mscore">0</span></span>
+            </div>
+
+            <div class="player">
+                <span class="dot" id="player-2"></span> <span id="player-2-tag"></span>
+                <span class="mscore">Opponent: <span id="enemy-score" class="mscore">0</span></span>
+            </div>
+        </div>
+
+        <div class="message-after-choice-selection" id="win-message"></div>
+
+        <div id="imageSection">
+            <div class="image rockImage" id="image1"></div>
+            <div class="image rockImage" id="image2"></div>
+        </div>
+
+        <div class="choices">
+            <button class="choice" id="rock">Rock</button>
+            <button class="choice" id="paper">Paper</button>
+            <button class="choice" id="scissor">Scissor</button>
+        </div>
+
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/index.js "></script>
+</body>
+
+</html>
